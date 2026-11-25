@@ -76,3 +76,9 @@ body.dark{--shadow:0 8px 28px rgba(0,0,0,.16)}body.dark .kpis article:hover{box-
 
 /* V12: botões de exclusão claramente identificados */
 .link.danger{color:var(--red);padding:5px 9px;border-radius:8px;font-weight:700;transition:background .15s ease}.link.danger:hover{background:color-mix(in srgb,var(--red) 12%,transparent)}
+/* V13: embalagem de compra vs unidade-base do estoque */
+.package-fields{border:1px solid var(--line);background:var(--bg);padding:14px;border-radius:12px;margin-top:4px}
+.package-fields h4{margin:0 0 6px;color:var(--ink);font-size:13px}
+.package-fields p,.package-hint{display:block;color:var(--muted);font-size:11px;line-height:1.55;margin:4px 0 10px}
+.package-fields label{min-width:0}
+.subtle{display:block;color:var(--muted);font-size:10px;white-space:normal;margin-top:3px}
