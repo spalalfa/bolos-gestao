@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 *{box-sizing:border-box} :root{--bg:#f5f6f8;--paper:#fff;--ink:#20232b;--muted:#7b8492;--line:#e6e9ef;--primary:#6b4b35;--primary2:#a47c58;--deep:#252a33;--accent:#e8dfd4;--green:#287a55;--red:#c4514b;--shadow:0 5px 24px rgba(28,32,39,.055)}
 body{margin:0;background:var(--bg);color:var(--ink);font:14px Manrope,system-ui,sans-serif;transition:background .2s,color .2s}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:10px 14px;background:var(--primary);color:#fff;font-size:12px;font-weight:700;transition:filter .15s,transform .15s}button:hover{filter:brightness(1.08);transform:translateY(-1px)}button:active{transform:translateY(0)}.hidden{display:none!important
 }
@@ -43,3 +43,33 @@ body.theme-graphite .hero{background:linear-gradient(110deg,#282d34,#3d4957)}bod
 @media(max-width:720px){.theme-chooser{max-width:118px;padding:8px 6px}.cost-form,.analytics-grid{grid-template-columns:1fr}.analytics-kpis{grid-template-columns:1fr 1fr}.analytics-kpis b{font-size:14px}.cost-form button{width:100%}.analytics-tablebox table{min-width:700px}}
 @media print{.operating-panel,.theme-chooser{display:none!important}.analytics-v7{display:block!important}.analytics-kpis{grid-template-columns:repeat(3,1fr)}}
 .recipe-cost-preview{grid-column:1/-1;padding:13px;border:1px solid var(--line);background:var(--bg);border-radius:10px;font-size:11px;color:var(--muted);display:grid;gap:5px}.recipe-cost-preview b{color:var(--primary)}.recipe-cost-preview strong{color:var(--green)}
+
+/* V10 — Refinamento visual: tipografia, hierarquia e acabamento */
+:root{--shadow:0 8px 28px rgba(50,36,24,.045);--primary:#72543d;--primary2:#b38a66;--accent:#efe5db;--line:#e9e3dd;}
+body,button,input,select,textarea{font-family:'DM Sans',system-ui,sans-serif!important;letter-spacing:0!important}
+h1,h2,h3,h4,.brand b,.kpis b,.price,.total-row,.pick strong,.card h3,.intro h2,.hero h2,.modalhead h2{font-family:'Plus Jakarta Sans','DM Sans',system-ui,sans-serif!important;letter-spacing:-.035em!important}
+body{font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button{font-size:13px;font-weight:700;border-radius:11px;padding:10px 15px;box-shadow:0 2px 5px rgba(35,28,23,.07)}
+button:hover{box-shadow:0 6px 15px rgba(35,28,23,.09)}
+#side{padding:22px 13px;background:var(--deep);box-shadow:8px 0 28px rgba(22,24,28,.035)}
+.brand{padding-bottom:27px}.brand b{font-size:15px}.brand small{font-size:11px;letter-spacing:.02em}
+.navgroup{font-size:10px;letter-spacing:.12em;padding:15px 11px 8px}
+#side>button:not(.logout){font-size:13px;padding:11px 12px;margin:2px 0;border-radius:11px;letter-spacing:0}
+#side>button.active,#side>button:hover{background:color-mix(in srgb,var(--primary2) 24%,#3c4552);color:#fff}
+main{padding:0 34px 30px}
+header{height:92px}header h1{font-size:24px;line-height:1.2;margin:5px 0}header small{font-size:10px;letter-spacing:.14em}
+.hero{border-radius:20px;padding:30px 32px;box-shadow:0 12px 30px rgba(67,49,34,.10)}.hero h2{font-size:28px;line-height:1.2}.hero p{font-size:13px;line-height:1.6}
+.kpis{gap:14px;margin:17px 0}.kpis article{padding:19px;border-radius:16px;transition:transform .18s,box-shadow .18s}.kpis article:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(30,32,38,.07)}.kpis span{font-size:11px;letter-spacing:.01em}.kpis b{font-size:25px;margin-top:8px}
+.card,.kpis article{border-radius:16px}.card{padding:21px;margin-bottom:16px}.card h3{font-size:16px;margin-bottom:15px}.cols{gap:16px;margin-bottom:16px}
+.intro{margin:12px 0 20px}.intro h2{font-size:24px}.intro p{font-size:12px;line-height:1.6}
+.toolbar input,.toolbar select,.form input,.form select,.card>input,.card label input,.card label select,.fields input,.fields select,.report-tools input{border-radius:11px;padding:12px 13px;font-size:12px;transition:border-color .16s,box-shadow .16s}
+.tablebox{border-radius:12px}th{font-size:10px;letter-spacing:.09em;padding:13px 12px}td{font-size:12px;padding:13px 12px}tr:hover td{background:color-mix(in srgb,var(--bg) 45%,transparent)}
+.pick{border-radius:13px;padding:14px;transition:transform .16s,border-color .16s,background .16s}.pick:hover{transform:translateY(-2px)}.pick strong{font-size:17px}.pick small{font-size:11px;line-height:1.5}
+.total-row{font-size:23px}.price{font-size:26px}.stackrow{font-size:12px;padding:12px 0}.stackrow b{font-size:12px}
+.dialog,dialog{border-radius:20px}dialog form{padding:25px}.modalhead h2{font-size:22px}.fields{gap:12px}.fields label{font-size:11px;line-height:1.5}
+#toast{font-size:12px;border-radius:12px;padding:13px 17px;box-shadow:0 12px 28px rgba(0,0,0,.18)}
+.theme-chooser{font-family:'DM Sans',system-ui,sans-serif!important;border-radius:11px;font-size:12px;padding:10px 12px}
+body.dark{--shadow:0 8px 28px rgba(0,0,0,.16)}body.dark .kpis article:hover{box-shadow:0 12px 28px rgba(0,0,0,.23)}
+@media(max-width:1100px){main{padding-left:25px;padding-right:25px}}
+@media(max-width:720px){main{padding-left:12px;padding-right:12px}header{height:76px}header h1{font-size:20px}.hero{padding:22px;border-radius:17px}.hero h2{font-size:24px}.card{padding:15px;border-radius:14px}.kpis article{border-radius:13px}.kpis b{font-size:21px}.intro h2{font-size:21px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}

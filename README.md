@@ -45,3 +45,11 @@ Temas: Claro, Escuro, Rosa, Menta, Oceano, Lavanda, Pôr do sol e Grafite. A pre
 
 ## PDV
 Atalhos: F2 (buscar), F8 (finalizar). O leitor USB/Bluetooth precisa funcionar como teclado e enviar Enter. O carrinho pode ser recuperado durante a mesma sessão do navegador.
+
+## Corrigir problemas de salvamento (V8 patch)
+
+Esta versão corrigida trata campos de código de barras vazios (salvos como `NULL` para permitir vários produtos sem código), reforça o tratamento de erros ao salvar cadastros/despesas e corrige o salvamento de receitas que referenciava uma variável inexistente. Também inicializa os módulos financeiros mesmo quando o evento de autenticação ocorre antes de sua instalação.
+
+**Para atualizar um banco já existente:** confirme que as migrações `supabase/upgrade-v5.sql` e `supabase/upgrade-v7.sql` foram executadas no SQL Editor. A V7 cria a tabela de custos operacionais e RPCs de ficha técnica/produção; se elas estiverem ausentes, esses recursos falharão. Depois do SQL, recarregue a página com Ctrl+F5.
+
+Se um formulário ainda falhar, agora o aviso exibe o erro devolvido pelo Supabase. Os casos comuns são `relation does not exist` (migration não executada), `permission denied`/`violates row-level security` (política/usuário), ou erro de conexão (URL/chave/rede).
