@@ -94,3 +94,10 @@ body.dark{--shadow:0 8px 28px rgba(0,0,0,.16)}body.dark .kpis article:hover{box-
 .history-actions .danger{color:#b33d38}
 #buyBarcode{font-size:1rem;letter-spacing:.025em}
 @media(max-width:600px){.history-entry{flex-direction:column;gap:8px}.history-actions{width:100%;justify-content:flex-start}.history-actions button{min-height:36px}.history-main>small{overflow-wrap:anywhere}}
+/* V15 polish: compact responsive forms, address and thermal-print workflows */
+body{font-family:'DM Sans',system-ui,sans-serif;letter-spacing:-.08px}
+#saleDeliveryAddress,#v15SaleAddress{width:100%;resize:vertical;min-height:58px;border:1px solid var(--line);border-radius:10px;padding:11px;background:var(--paper);color:var(--ink)}
+.sales-history-panel{margin-top:14px}.sales-history-panel h3{margin:0 0 12px}.history-entry{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.v15-sale-line{display:grid;grid-template-columns:minmax(160px,2fr) minmax(70px,.7fr) minmax(90px,.8fr) 28px;gap:7px;margin:8px 0}.v15-sale-line input,.v15-sale-line select{min-width:0;width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}
+.positive{color:var(--green)}.negative{color:var(--red)}.subcell{display:block;max-width:220px;white-space:normal;font-size:10px;color:var(--muted);margin-top:3px}
+@media(max-width:650px){.v15-sale-line{grid-template-columns:1fr 70px 85px 25px}.sales-history-panel .tablebox{overflow-x:auto}}

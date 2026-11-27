@@ -1,4 +1,4 @@
-# Bolos & Gestão — V7
+# Bolos & Gestão — V15
 
 Sistema web para confeitaria/bolos com Supabase Auth e banco protegido por RLS.
 
@@ -62,3 +62,7 @@ Execute `supabase/upgrade-v14-operacao.sql` no SQL Editor do Supabase (uma vez, 
 Na tela de fornecedores, Nome passa a ser Razão Social e Nome Fantasia é opcional. Em produtos, Fabricante é opcional. Compras agora registra código de barras, data, NF/Cupom e taxa de entrega (rateada no custo do estoque). O histórico recente de compras tem editar/excluir; produção permite editar data/observação e excluir com reversão segura, bloqueada se houver movimentações posteriores.
 
 O botão Editar receita foi corrigido para abrir o editor somente quando clicado, e não durante a renderização da lista.
+
+## Atualização V15
+
+Consulte `README-V15.md` e execute `supabase/upgrade-v15-addresses-accounts-sales.sql` após a V14. Esta versão adiciona endereços/CEP, contas bancárias, débito/crédito de compras e vendas, edição/exclusão de vendas e impressão térmica de comprovante não fiscal.
