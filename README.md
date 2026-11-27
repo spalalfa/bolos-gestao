@@ -53,3 +53,12 @@ Esta versão corrigida trata campos de código de barras vazios (salvos como `NU
 **Para atualizar um banco já existente:** confirme que as migrações `supabase/upgrade-v5.sql` e `supabase/upgrade-v7.sql` foram executadas no SQL Editor. A V7 cria a tabela de custos operacionais e RPCs de ficha técnica/produção; se elas estiverem ausentes, esses recursos falharão. Depois do SQL, recarregue a página com Ctrl+F5.
 
 Se um formulário ainda falhar, agora o aviso exibe o erro devolvido pelo Supabase. Os casos comuns são `relation does not exist` (migration não executada), `permission denied`/`violates row-level security` (política/usuário), ou erro de conexão (URL/chave/rede).
+
+
+## V14 — melhorias operacionais
+
+Execute `supabase/upgrade-v14-operacao.sql` no SQL Editor do Supabase (uma vez, depois de backup) antes de usar a versão V14. Esta migration adiciona nome fantasia, fabricante e metadados de compras, funções seguras para editar/excluir compra e excluir produção, e os pagamentos Cortesia/Doação.
+
+Na tela de fornecedores, Nome passa a ser Razão Social e Nome Fantasia é opcional. Em produtos, Fabricante é opcional. Compras agora registra código de barras, data, NF/Cupom e taxa de entrega (rateada no custo do estoque). O histórico recente de compras tem editar/excluir; produção permite editar data/observação e excluir com reversão segura, bloqueada se houver movimentações posteriores.
+
+O botão Editar receita foi corrigido para abrir o editor somente quando clicado, e não durante a renderização da lista.

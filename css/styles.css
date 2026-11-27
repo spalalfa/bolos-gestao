@@ -82,3 +82,15 @@ body.dark{--shadow:0 8px 28px rgba(0,0,0,.16)}body.dark .kpis article:hover{box-
 .package-fields p,.package-hint{display:block;color:var(--muted);font-size:11px;line-height:1.55;margin:4px 0 10px}
 .package-fields label{min-width:0}
 .subtle{display:block;color:var(--muted);font-size:10px;white-space:normal;margin-top:3px}
+
+/* V14: history cards with visible, touch-friendly actions */
+.history-entry{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid var(--line,#e7e2dc)}
+.history-entry:last-child{border-bottom:0}
+.history-main{display:flex;flex-direction:column;gap:5px;min-width:0;flex:1}
+.history-main>b,.history-main>b:first-child{font-weight:700;line-height:1.35}
+.history-main>small{color:var(--muted,#82796f);font-size:.82rem;line-height:1.5;overflow-wrap:anywhere}
+.history-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.history-actions button{padding:7px 9px;border-radius:8px}
+.history-actions .danger{color:#b33d38}
+#buyBarcode{font-size:1rem;letter-spacing:.025em}
+@media(max-width:600px){.history-entry{flex-direction:column;gap:8px}.history-actions{width:100%;justify-content:flex-start}.history-actions button{min-height:36px}.history-main>small{overflow-wrap:anywhere}}
